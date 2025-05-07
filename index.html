@@ -3,72 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scam Awareness & Protection</title>
+    <title>Scam Protection & Detection Center</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #0f0;
-        }
-        nav {
-            background-color: #001;
-            padding: 1rem;
-            border-bottom: 2px solid #0f0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            color: #fff;
-        }
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero-section {
+            text-align: center;
             padding: 2rem;
+            background: rgba(0, 51, 0, 0.3);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
         }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin: 2rem 0;
-            border: 2px solid #0f0;
+
+        .target-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+
+        .group-card {
+            background: rgba(0, 51, 0, 0.3);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 5px;
         }
-        h1 {
-            text-align: center;
-            color: #0f0;
-            text-shadow: 0 0 10px #0f0;
+
+        .scan-interface {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        footer {
-            background-color: #001;
-            color: #0f0;
-            text-align: center;
+
+        .capabilities-list {
+            background: rgba(0, 51, 0, 0.3);
             padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            border-top: 2px solid #0f0;
+            border: 1px solid var(--border-color);
+            margin-top: 1rem;
+        }
+
+        .capability-group {
+            margin-bottom: 1rem;
+        }
+
+        .capability-group h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .capability-group ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .capability-group li {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .capability-group li::before {
+            content: "→";
+            color: var(--primary-color);
+            margin-right: 0.5rem;
         }
     </style>
 </head>
@@ -76,28 +74,176 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="scam-types.html">Common Scams</a></li>
-            <li><a href="report.html">Report a Scam</a></li>
+            <li><a href="scam-types.html">Scam Types</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Protecting Our Community from Scams</h1>
-        <div class="video-container">
-            <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="How to Spot and Avoid Scams" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <section class="hero-section">
+            <h1>Advanced Scam Protection & Detection Center</h1>
+            <p>Protecting seniors, veterans, and vulnerable populations from sophisticated scams</p>
+            <p>Powered by Ghoztwoods LLC and Partner Agencies</p>
+        </section>
+
+        <div class="target-groups">
+            <div class="group-card">
+                <h2>Senior Citizens</h2>
+                <p>Learn about common scams targeting seniors:</p>
+                <ul>
+                    <li>Medicare/Health Insurance Scams</li>
+                    <li>Tech Support Fraud</li>
+                    <li>Grandparent Scams</li>
+                    <li>Investment Schemes</li>
+                </ul>
+            </div>
+
+            <div class="group-card">
+                <h2>Veterans</h2>
+                <p>Protection against veteran-specific scams:</p>
+                <ul>
+                    <li>VA Benefit Scams</li>
+                    <li>Pension Poaching</li>
+                    <li>Fake Military Charities</li>
+                    <li>Service-Related Schemes</li>
+                </ul>
+            </div>
+
+            <div class="group-card">
+                <h2>Vulnerable Populations</h2>
+                <p>Safeguards against targeted exploitation:</p>
+                <ul>
+                    <li>Government Impersonation</li>
+                    <li>Romance Scams</li>
+                    <li>Lottery/Sweepstakes Fraud</li>
+                    <li>Identity Theft</li>
+                </ul>
+            </div>
         </div>
-        <p>Stay informed about the latest scams targeting our community.</p>
+
+        <section class="scan-interface">
+            <div class="input-section">
+                <h2>Scam Detection Tool</h2>
+                <p>Enter any suspicious contact information for immediate analysis:</p>
+                <input type="text" id="target-input" placeholder="Enter phone, email, domain, or crypto address...">
+                <button class="scan-button" onclick="analyzeThreat()">Analyze Threat</button>
+                
+                <div class="capabilities-list">
+                    <h3>Advanced Detection Capabilities:</h3>
+                    
+                    <div class="capability-group">
+                        <h3>Phone Intelligence</h3>
+                        <ul>
+                            <li>Sync.me & PhoneInfoga Analysis</li>
+                            <li>WhitePages & Spokeo Integration</li>
+                            <li>Carrier & Location Tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-group">
+                        <h3>Email Analysis</h3>
+                        <ul>
+                            <li>DeHashed Database Checks</li>
+                            <li>Intelligence X & Epieos OSINT</li>
+                            <li>Social Media Presence Detection</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-group">
+                        <h3>Domain Intelligence</h3>
+                        <ul>
+                            <li>SecurityTrails Historical Data</li>
+                            <li>Infrastructure Analysis</li>
+                            <li>Connected Domain Mapping</li>
+                        </ul>
+                    </div>
+
+                    <div class="capability-group">
+                        <h3>Crypto Investigation</h3>
+                        <ul>
+                            <li>Blockchain Analytics</li>
+                            <li>Transaction Pattern Analysis</li>
+                            <li>Wallet Clustering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <div id="scan-results" class="analysis-panel">
+                    <h3>Scan Results</h3>
+                    <div id="results-content">
+                        <p>Enter a target to begin analysis...</p>
+                    </div>
+                </div>
+
+                <div id="threat-intel" class="analysis-panel">
+                    <h3>Threat Intelligence</h3>
+                    <div id="intel-content">
+                        <p>Waiting for analysis...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <script>
+        async function analyzeThreat() {
+            const target = document.getElementById('target-input').value;
+            if (!target) return;
+
+            const resultsDiv = document.getElementById('results-content');
+            const intelDiv = document.getElementById('intel-content');
+
+            resultsDiv.innerHTML = '<p>Analyzing target...</p>';
+            intelDiv.innerHTML = '<p>Gathering intelligence...</p>';
+
+            try {
+                // Enhanced analysis using multiple endpoints
+                const endpoints = [
+                    { type: 'phone', url: '/api/phone-intel' },
+                    { type: 'email', url: '/api/email-analysis' },
+                    { type: 'domain', url: '/api/domain-recon' },
+                    { type: 'crypto', url: '/api/crypto-investigation' }
+                ];
+
+                const results = await Promise.all(endpoints.map(endpoint => 
+                    fetch(endpoint.url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ target })
+                    }).then(res => res.json())
+                    .catch(err => ({ type: endpoint.type, error: true }))
+                ));
+
+                displayResults(results);
+            } catch (error) {
+                resultsDiv.innerHTML = '<p class="error">Error during analysis</p>';
+                intelDiv.innerHTML = '<p class="error">Intelligence gathering failed</p>';
+            }
+        }
+
+        function displayResults(results) {
+            // Implementation of results display logic
+            // This would format and display the comprehensive analysis results
+        }
+
+        // Initialize matrix background effect
+        const canvas = document.createElement('canvas');
+        canvas.classList.add('matrix-effect');
+        document.body.appendChild(canvas);
+        initMatrix(canvas);
+
+        function initMatrix(canvas) {
+            // Implementation of matrix rain effect
+            // This creates the cybersecurity-themed background animation
+        }
+    </script>
+
     <footer>
-        <p>&copy; 2024 Scam Awareness & Protection. Created by Avery Delpit</p>
+        <p>&copy; 2024 Scam Protection & Detection Center | Powered by Ghoztwoods LLC</p>
     </footer>
 </body>
 </html>

@@ -3,73 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Common Scams - Scam Awareness & Protection</title>
+    <title>2025 Scam Types - Scam Protection & Detection Center</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #0f0;
+        .scam-table {
+            width: 100%;
+            margin: 2rem 0;
+            overflow-x: auto;
         }
-        nav {
-            background-color: #001;
-            padding: 1rem;
-            border-bottom: 2px solid #0f0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            color: #fff;
-        }
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        table {
+
+        .scam-table table {
             width: 100%;
             border-collapse: collapse;
+        }
+
+        .risk-high {
+            color: #ff4444;
+        }
+
+        .risk-medium {
+            color: #ffaa00;
+        }
+
+        .risk-low {
+            color: #00ff00;
+        }
+
+        .target-group {
             margin: 2rem 0;
-            border: 2px solid #0f0;
+            padding: 1.5rem;
+            background: rgba(0, 51, 0, 0.3);
+            border: 1px solid var(--border-color);
         }
-        th, td {
-            border: 1px solid #0f0;
-            padding: 1rem;
-            text-align: left;
+
+        .warning-signs {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
         }
-        th {
-            background-color: #001;
-        }
-        tr:hover {
-            background-color: #001;
-        }
-        h1 {
-            text-align: center;
-            color: #0f0;
-            text-shadow: 0 0 10px #0f0;
-        }
-        footer {
-            background-color: #001;
-            color: #0f0;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            border-top: 2px solid #0f0;
+
+        .protection-tips {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
         }
     </style>
 </head>
@@ -77,48 +51,155 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="scam-types.html">Common Scams</a></li>
-            <li><a href="report.html">Report a Scam</a></li>
+            <li><a href="scam-types.html">Scam Types</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Common Types of Scams</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Scam Type</th>
-                    <th>Description</th>
-                    <th>Warning Signs</th>
-                    <th>How to Protect Yourself</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Phone Scams</td>
-                    <td>Fraudulent calls claiming to be from government agencies or tech support</td>
-                    <td>Urgent requests, threats, requests for personal information</td>
-                    <td>Never give personal information over phone, verify caller's identity</td>
-                </tr>
-                <tr>
-                    <td>Email Phishing</td>
-                    <td>Fake emails attempting to steal personal information</td>
-                    <td>Poor grammar, suspicious links, urgent demands</td>
-                    <td>Don't click unknown links, verify sender's address</td>
-                </tr>
-                <tr>
-                    <td>Gift Card Scams</td>
-                    <td>Requests to pay with gift cards for services or debts</td>
-                    <td>Payment requested in gift cards, urgent pressure</td>
-                    <td>Never pay bills with gift cards, it's always a scam</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>2025 Scam Types & Emerging Threats</h1>
+        
+        <section class="target-group">
+            <h2>Senior Citizens - Priority Threats</h2>
+            <div class="scam-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scam Type</th>
+                            <th>Description</th>
+                            <th>Risk Level</th>
+                            <th>Common Methods</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI Voice Cloning Scams</td>
+                            <td>Scammers use AI to clone voices of family members requesting emergency funds</td>
+                            <td class="risk-high">High</td>
+                            <td>Phone calls, voicemails</td>
+                        </tr>
+                        <tr>
+                            <td>Medicare AI Chatbot Fraud</td>
+                            <td>Fake AI health assistants requesting Medicare information</td>
+                            <td class="risk-high">High</td>
+                            <td>Text messages, emails</td>
+                        </tr>
+                        <tr>
+                            <td>Digital Payment App Scams</td>
+                            <td>Fraudulent requests through Zelle, Venmo, etc.</td>
+                            <td class="risk-high">High</td>
+                            <td>Mobile apps, emails</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="target-group">
+            <h2>Veterans - Current Threats</h2>
+            <div class="scam-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scam Type</th>
+                            <th>Description</th>
+                            <th>Risk Level</th>
+                            <th>Common Methods</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PACT Act Benefits Scams</td>
+                            <td>Fraudulent assistance with new VA benefits claims</td>
+                            <td class="risk-high">High</td>
+                            <td>Phone, email, social media</td>
+                        </tr>
+                        <tr>
+                            <td>Veteran Crypto Investment</td>
+                            <td>Targeted cryptocurrency investment schemes</td>
+                            <td class="risk-high">High</td>
+                            <td>Social media, websites</td>
+                        </tr>
+                        <tr>
+                            <td>Military Records Scam</td>
+                            <td>Charging for free military records access</td>
+                            <td class="risk-medium">Medium</td>
+                            <td>Websites, emails</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="target-group">
+            <h2>Cryptocurrency Scams - 2025 Trends</h2>
+            <div class="scam-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scam Type</th>
+                            <th>Description</th>
+                            <th>Risk Level</th>
+                            <th>Common Methods</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI Trading Bot Scams</td>
+                            <td>Fake AI-powered trading systems promising high returns</td>
+                            <td class="risk-high">High</td>
+                            <td>Websites, social media</td>
+                        </tr>
+                        <tr>
+                            <td>DeFi Rug Pulls</td>
+                            <td>Fraudulent decentralized finance projects</td>
+                            <td class="risk-high">High</td>
+                            <td>DeFi platforms</td>
+                        </tr>
+                        <tr>
+                            <td>Recovery Scams</td>
+                            <td>False promises to recover lost crypto</td>
+                            <td class="risk-high">High</td>
+                            <td>Email, direct messages</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="warning-signs">
+            <h2>Warning Signs</h2>
+            <ul>
+                <li>Urgent requests for immediate action</li>
+                <li>Demands for payment in cryptocurrency or gift cards</li>
+                <li>Unsolicited investment opportunities</li>
+                <li>Requests for personal or financial information</li>
+                <li>Promises of unrealistic returns or benefits</li>
+                <li>Pressure to keep communication secret</li>
+                <li>Poor grammar or spelling in official communications</li>
+                <li>Requests to download unknown software or apps</li>
+            </ul>
+        </section>
+
+        <section class="protection-tips">
+            <h2>Protection Tips</h2>
+            <ul>
+                <li>Verify caller identity through official channels</li>
+                <li>Never share personal information without verification</li>
+                <li>Use multi-factor authentication for all accounts</li>
+                <li>Keep software and devices updated</li>
+                <li>Research before making any financial decisions</li>
+                <li>Use our scam detection tool for verification</li>
+                <li>Report suspicious activity immediately</li>
+                <li>Consult with trusted family members or advisors</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Scam Awareness & Protection. Created by Avery Delpit</p>
+        <p>&copy; 2024 Scam Protection & Detection Center | Powered by Ghoztwoods LLC</p>
     </footer>
 </body>
 </html>
