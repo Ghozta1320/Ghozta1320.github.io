@@ -67,6 +67,15 @@
             border: 1px solid var(--border-color);
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.querySelector('iframe');
+            if (video) {
+                // Force reload the iframe to trigger autoplay
+                video.src = video.src;
+            }
+        });
+    </script>
 </head>
 <body>
     <nav>
