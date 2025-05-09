@@ -52,54 +52,14 @@
             border: 1px solid var(--border-color);
             background: rgba(0, 51, 0, 0.2);
         }
-        .video-container .thumbnail {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://img.youtube.com/vi/sdOv8BqnBY0/maxresdefault.jpg') center/cover;
-            cursor: pointer;
-        }
-
-        .video-container .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(0, 255, 0, 0.8);
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s;
-        }
-
-        .video-container .play-button:hover {
-            background: rgba(0, 255, 0, 1);
-        }
-
-        .video-container .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 20px 0 20px 35px;
-            border-color: transparent transparent transparent #000;
-            margin-left: 8px;
-        }
-
         .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            display: none;
         }
+
 
         .contact-info {
             margin-top: 2rem;
@@ -125,30 +85,15 @@
 
         <section class="video-section">
             <h2>How to Protect Yourself from Scams</h2>
-            <div class="video-container" id="video-container">
-                <div class="thumbnail">
-                    <div class="play-button" id="play-button"></div>
-                </div>
+            <div class="video-container">
                 <iframe width="560" height="315" 
-                    src="about:blank"
-                    data-src="https://www.youtube.com/embed/sdOv8BqnBY0?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1" 
+                    src="https://www.youtube.com/embed/sdOv8BqnBY0?rel=0&modestbranding=1&playsinline=1&controls=1" 
                     title="How to Protect Yourself from Scams" 
                     frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
                 </iframe>
             </div>
-            <script>
-                document.getElementById('play-button').addEventListener('click', function() {
-                    var container = document.getElementById('video-container');
-                    var iframe = container.querySelector('iframe');
-                    var thumbnail = container.querySelector('.thumbnail');
-                    
-                    iframe.src = iframe.getAttribute('data-src');
-                    iframe.style.display = 'block';
-                    thumbnail.style.display = 'none';
-                });
-            </script>
         </section>
 
         <section class="partner-agencies">
