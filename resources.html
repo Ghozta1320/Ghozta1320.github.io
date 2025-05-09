@@ -42,24 +42,6 @@
             margin: 2rem 0;
             text-align: center;
         }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
-            margin: 0 auto;
-            border: 1px solid var(--border-color);
-            background: rgba(0, 51, 0, 0.2);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
 
         .contact-info {
             margin-top: 2rem;
@@ -84,15 +66,16 @@
         <h1>Protection Resources & Partner Agencies</h1>
 
         <section class="video-section">
-            <h2>How to Protect Yourself from Scams</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/sdOv8BqnBY0?rel=0&modestbranding=1&playsinline=1&controls=1" 
-                    title="How to Protect Yourself from Scams" 
-                    frameborder="0" 
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+            <h2>Educational Resources on Scam Protection</h2>
+            <div class="resource-card" style="max-width: 800px; margin: 0 auto;">
+                <h3>Learn About Scam Prevention</h3>
+                <p>Access these trusted resources to learn how to protect yourself from scams:</p>
+                <ul>
+                    <li><a href="https://www.ftc.gov/scams" target="_blank">FTC's Guide to Avoiding Scams →</a></li>
+                    <li><a href="https://www.usa.gov/common-scams-frauds" target="_blank">USA.gov Common Scams Guide →</a></li>
+                    <li><a href="https://www.consumer.ftc.gov/features/scam-alerts" target="_blank">Latest Scam Alerts →</a></li>
+                </ul>
+                <p style="margin-top: 1rem;">These resources are regularly updated with the latest information on scam prevention and protection strategies.</p>
             </div>
         </section>
 
