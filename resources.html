@@ -67,14 +67,29 @@
             border: 1px solid var(--border-color);
         }
     </style>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video = document.querySelector('iframe');
-            if (video) {
-                // Force reload the iframe to trigger autoplay
-                video.src = video.src;
-            }
-        });
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video-player', {
+                height: '315',
+                width: '560',
+                videoId: 'sdugq5_d5mE',
+                playerVars: {
+                    'autoplay': 1,
+                    'mute': 1,
+                    'playsinline': 1,
+                    'controls': 1
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
     </script>
 </head>
 <body>
@@ -94,14 +109,7 @@
         <section class="video-section">
             <h2>How to Protect Yourself from Scams</h2>
             <div class="video-container">
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/sdugq5_d5mE?autoplay=1&mute=1&playsinline=1" 
-                    title="Scammer Payback Answers Scam Questions | Tech Support | WIRED" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
+                <div id="video-player"></div>
             </div>
         </section>
 
