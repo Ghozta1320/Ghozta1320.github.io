@@ -28,6 +28,18 @@
         a:hover, a:focus {
             color: #00ff00;
             text-decoration: underline;
+            outline: 2px solid #00ff00;
+            outline-offset: 2px;
+        }
+
+        .agency-card:focus-within {
+            outline: 2px solid #00ff00;
+            outline-offset: 4px;
+        }
+
+        .video-container:focus-within {
+            outline: 2px solid #00ff00;
+            outline-offset: 4px;
         }
 
         .resources-grid {
@@ -124,8 +136,8 @@
         <section class="partner-agencies">
             <h2>Partner Agencies & Support Organizations</h2>
             
-            <div class="agency-list">
-                <div class="agency-card">
+            <div class="agency-list" role="list">
+                <div class="agency-card" role="listitem">
                     <h3>Ghoztwoods LLC</h3>
                     <p>Leading cybersecurity and scam prevention services</p>
                     <ul>
@@ -136,7 +148,7 @@
                     <a href="#" class="learn-more">Learn More →</a>
                 </div>
 
-                <div class="agency-card">
+                <div class="agency-card" role="listitem">
                     <h3>Federal Trade Commission (FTC)</h3>
                     <p>Consumer protection and fraud prevention</p>
                     <ul>
@@ -144,10 +156,10 @@
                         <li>Consumer Alerts</li>
                         <li>Identity Theft Recovery</li>
                     </ul>
-                    <a href="https://www.ftc.gov" target="_blank">Visit Website →</a>
+                    <a href="https://www.ftc.gov" target="_blank" aria-label="Visit Federal Trade Commission website (opens in new tab)">Visit Website →</a>
                 </div>
 
-                <div class="agency-card">
+                <div class="agency-card" role="listitem">
                     <h3>FBI's IC3</h3>
                     <p>Internet Crime Complaint Center</p>
                     <ul>
@@ -155,10 +167,10 @@
                         <li>Fraud Alerts</li>
                         <li>Investigation Support</li>
                     </ul>
-                    <a href="https://www.ic3.gov" target="_blank">File Report →</a>
+                    <a href="https://www.ic3.gov" target="_blank" aria-label="File report with FBI's Internet Crime Complaint Center (opens in new tab)">File Report →</a>
                 </div>
 
-                <div class="agency-card">
+                <div class="agency-card" role="listitem">
                     <h3>AARP Fraud Watch Network</h3>
                     <p>Senior-focused fraud prevention</p>
                     <ul>
@@ -166,13 +178,13 @@
                         <li>Fraud Helpline</li>
                         <li>Educational Programs</li>
                     </ul>
-                    <a href="https://www.aarp.org/money/scams-fraud/" target="_blank">Get Help →</a>
+                    <a href="https://www.aarp.org/money/scams-fraud/" target="_blank" aria-label="Get help from AARP Fraud Watch Network (opens in new tab)">Get Help →</a>
                 </div>
             </div>
         </section>
 
-        <section class="resources-grid">
-            <div class="resource-card">
+        <section class="resources-grid" role="region" aria-label="Resource Categories">
+            <div class="resource-card" role="region" aria-label="Senior Citizens Resources">
                 <h3>For Senior Citizens</h3>
                 <ul>
                     <li>National Elder Fraud Hotline: 833-FRAUD-11</li>
@@ -182,7 +194,7 @@
                 </ul>
             </div>
 
-            <div class="resource-card">
+            <div class="resource-card" role="region" aria-label="Veterans Resources">
                 <h3>For Veterans</h3>
                 <ul>
                     <li>VA Office of Inspector General</li>
@@ -192,7 +204,7 @@
                 </ul>
             </div>
 
-            <div class="resource-card">
+            <div class="resource-card" role="region" aria-label="Cryptocurrency Safety Resources">
                 <h3>Cryptocurrency Safety</h3>
                 <ul>
                     <li>Crypto Fraud Reporting Centers</li>
