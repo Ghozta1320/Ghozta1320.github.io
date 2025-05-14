@@ -1,0 +1,18 @@
+{
+    "target": "+1-555-123-4567",
+    "timestamp": "20250506_021205",
+    "result": {
+        "carrier": "VoIP Provider",
+        "location": "Multiple Locations",
+        "risk_factors": [
+            "Associated with multiple scam reports",
+            "Number recently activated",
+            "Spoofing capabilities detected"
+        ],
+        "reported_incidents": 12,
+        "confidence_score": 0.85,
+        "scan_time": "2025-05-06 02:12:05",
+        "target": "+1-555-123-4567",
+        "target_type": "phone"
+    }
+}

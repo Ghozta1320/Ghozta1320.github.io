@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Scam Protection & Detection Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00ff00;
+            color: #000;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+
+        a {
+            transition: color 0.3s;
+        }
+
+        a:hover, a:focus {
+            color: #00ff00;
+            text-decoration: underline;
+            outline: 2px solid #00ff00;
+            outline-offset: 2px;
+        }
+
+        .agency-card:focus-within {
+            outline: 2px solid #00ff00;
+            outline-offset: 4px;
+        }
+
+        .video-container:focus-within {
+            outline: 2px solid #00ff00;
+            outline-offset: 4px;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .resource-card {
+            background: rgba(0, 51, 0, 0.3);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .partner-agencies {
+            margin-top: 2rem;
+        }
+
+        .agency-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .agency-card {
+            background: rgba(0, 51, 0, 0.2);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .video-section {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            background: rgba(0, 51, 0, 0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(0, 51, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="#main" class="skip-link">Skip to main content</a>
+        <ul role="menubar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="scam-types.html">Scam Types</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <h1>Protection Resources & Partner Agencies</h1>
+
+        <section class="video-section">
+            <h2>Educational Resources on Scam Protection</h2>
+            <div class="video-container">
+                <iframe width="1521" height="526" 
+                    src="https://www.youtube.com/embed/GsJigfdl8F8" 
+                    title="77-Year-Old Woman takes $25,000 to Bitcoin ATM (SCAM)" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="partner-agencies">
+            <h2>Partner Agencies & Support Organizations</h2>
+            
+            <div class="agency-list" role="list">
+                <div class="agency-card" role="listitem">
+                    <h3>Ghoztwoods LLC</h3>
+                    <p>Leading cybersecurity and scam prevention services</p>
+                    <ul>
+                        <li>24/7 Scam Detection</li>
+                        <li>Victim Support Services</li>
+                        <li>Educational Resources</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="agency-card" role="listitem">
+                    <h3>Federal Trade Commission (FTC)</h3>
+                    <p>Consumer protection and fraud prevention</p>
+                    <ul>
+                        <li>Scam Reporting</li>
+                        <li>Consumer Alerts</li>
+                        <li>Identity Theft Recovery</li>
+                    </ul>
+                    <a href="https://www.ftc.gov" target="_blank" aria-label="Visit Federal Trade Commission website (opens in new tab)">Visit Website →</a>
+                </div>
+
+                <div class="agency-card" role="listitem">
+                    <h3>FBI's IC3</h3>
+                    <p>Internet Crime Complaint Center</p>
+                    <ul>
+                        <li>Cybercrime Reporting</li>
+                        <li>Fraud Alerts</li>
+                        <li>Investigation Support</li>
+                    </ul>
+                    <a href="https://www.ic3.gov" target="_blank" aria-label="File report with FBI's Internet Crime Complaint Center (opens in new tab)">File Report →</a>
+                </div>
+
+                <div class="agency-card" role="listitem">
+                    <h3>AARP Fraud Watch Network</h3>
+                    <p>Senior-focused fraud prevention</p>
+                    <ul>
+                        <li>Scam Updates</li>
+                        <li>Fraud Helpline</li>
+                        <li>Educational Programs</li>
+                    </ul>
+                    <a href="https://www.aarp.org/money/scams-fraud/" target="_blank" aria-label="Get help from AARP Fraud Watch Network (opens in new tab)">Get Help →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources-grid" role="region" aria-label="Resource Categories">
+            <div class="resource-card" role="region" aria-label="Senior Citizens Resources">
+                <h3>For Senior Citizens</h3>
+                <ul>
+                    <li>National Elder Fraud Hotline: 833-FRAUD-11</li>
+                    <li>Senior Medicare Patrol</li>
+                    <li>Elder Justice Initiative</li>
+                    <li>Local Area Agency on Aging</li>
+                </ul>
+            </div>
+
+            <div class="resource-card" role="region" aria-label="Veterans Resources">
+                <h3>For Veterans</h3>
+                <ul>
+                    <li>VA Office of Inspector General</li>
+                    <li>Veterans Crisis Line</li>
+                    <li>Military Consumer Protection Office</li>
+                    <li>Veterans Benefits Administration</li>
+                </ul>
+            </div>
+
+            <div class="resource-card" role="region" aria-label="Cryptocurrency Safety Resources">
+                <h3>Cryptocurrency Safety</h3>
+                <ul>
+                    <li>Crypto Fraud Reporting Centers</li>
+                    <li>Blockchain Analysis Tools</li>
+                    <li>Wallet Security Guidelines</li>
+                    <li>Transaction Verification Services</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <h2>Emergency Contacts</h2>
+            <p>If you believe you're currently being scammed:</p>
+            <ul>
+                <li>Emergency Hotline: 1-800-XXX-XXXX (24/7)</li>
+                <li>Ghoztwoods LLC Support: support@ghoztwoods.com</li>
+                <li>Local Law Enforcement: 911</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Scam Protection & Detection Center | Powered by Ghoztwoods LLC</p>
+    </footer>
+</body>
+</html>
