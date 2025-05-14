@@ -1,108 +1,99 @@
-/* Matrix-inspired theme */
+/* Base styles */
 :root {
     --primary-color: #00ff00;
     --background-color: #000000;
     --text-color: #00ff00;
-    --accent-color: #003300;
     --border-color: #00ff00;
+    --accent-color: #003300;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Courier New', monospace;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 /* Navigation */
 nav {
-    background-color: var(--accent-color);
+    background-color: rgba(0, 51, 0, 0.3);
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1rem;
+    justify-content: flex-start;
+    gap: 2rem;
 }
 
 nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffffff;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-h1, h2, h3 {
     color: var(--primary-color);
 }
 
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    border: 1px solid var(--border-color);
+/* Main content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-th, td {
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    text-align: left;
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
-th {
-    background-color: var(--accent-color);
-}
-
-/* Forms */
-.form-group {
+h2 {
+    color: var(--primary-color);
     margin-bottom: 1rem;
+    font-size: 1.8rem;
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #001100;
+/* Form elements */
+input, button {
+    background-color: var(--background-color);
     border: 1px solid var(--border-color);
     color: var(--text-color);
+    padding: 0.5rem 1rem;
     font-family: 'Courier New', monospace;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
 }
 
 button {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
 }
 
 button:hover {
@@ -110,70 +101,50 @@ button:hover {
     color: var(--background-color);
 }
 
-/* Video Container */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    margin: 1rem 0;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Links */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--accent-color);
+    background-color: rgba(0, 51, 0, 0.3);
     border-top: 1px solid var(--border-color);
-    margin-top: 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Matrix-style animations */
-@keyframes flicker {
-    0% { opacity: 0.8; }
-    50% { opacity: 1; }
-    100% { opacity: 0.8; }
+/* Utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.matrix-text {
-    animation: flicker 2s infinite;
+.text-center {
+    text-align: center;
 }
 
-/* Responsive Design */
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+/* Responsive design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
+        gap: 1rem;
     }
 
     main {
         padding: 1rem;
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
+    h1 {
+        font-size: 2rem;
     }
 }

@@ -208,7 +208,9 @@
         }
     </style>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scanner.css">
     <script src="auth.js"></script>
+    <script src="scanner.js"></script>
 </head>
 <body>
     <div id="matrix-overlay" class="matrix-overlay">
@@ -313,10 +315,24 @@
             <section class="scan-interface">
                 <h2>Scam Detection Tool</h2>
                 <p>Enter any suspicious contact information for immediate analysis:</p>
-                <input type="text" id="target-input" placeholder="Enter phone, email, domain, or crypto address...">
-                <button onclick="analyzeThreat()">Analyze Threat</button>
+                <div class="scan-form">
+                    <input type="text" 
+                           id="target-input" 
+                           placeholder="Enter phone, email, domain, or crypto address..."
+                           aria-label="Target for analysis">
+                    <button class="scan-button" 
+                            onclick="analyzeThreat()"
+                            aria-label="Start analysis">
+                        Analyze Threat
+                    </button>
+                </div>
                 
-                <div id="scan-results"></div>
+                <div id="scan-results" 
+                     role="region" 
+                     aria-live="polite" 
+                     aria-atomic="true">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
             </section>
         </main>
 
@@ -412,18 +428,7 @@
             });
         });
 
-        function analyzeThreat() {
-            const input = document.getElementById('target-input').value;
-            const results = document.getElementById('scan-results');
-            
-            if (!input) {
-                results.innerHTML = '<p style="color: #ff0000;">Please enter a target to analyze</p>';
-                return;
-            }
-
-            results.innerHTML = '<p>Analyzing threat... Please wait.</p>';
-            // Add your threat analysis logic here
-        }
+        // Threat analysis logic moved to scanner.js
     </script>
 </body>
 </html>
