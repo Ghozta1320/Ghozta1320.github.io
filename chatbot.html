@@ -222,7 +222,7 @@
             formData.append('audio', audioBlob);
             
             try {
-                const response = await fetch('https://Ghozta1320.github.io/api/audio-analysis', {
+                const response = await fetch('http://localhost:5000/api/audio-analysis', {
                     method: 'POST',
                     body: formData
                 });
@@ -251,7 +251,7 @@
 
             try {
                 // Threat Analysis
-                const threatResponse = await fetch('https://Ghozta1320.github.io/api/scan/threat', {
+                const threatResponse = await fetch('http://localhost:5000/api/scan/threat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ target: target })
@@ -259,7 +259,7 @@
                 const threatData = await threatResponse.json();
 
                 // Deep Scan Analysis
-                const deepScanResponse = await fetch('https://Ghozta1320.github.io/api/deep-scan', {
+                const deepScanResponse = await fetch('http://localhost:5000/api/deep-scan', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
